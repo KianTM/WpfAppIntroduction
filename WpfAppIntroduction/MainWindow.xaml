@@ -57,13 +57,15 @@
 				  Margin="10"
 				  HorizontalAlignment="Stretch"
 				  VerticalAlignment="Stretch"
-				  Content="Opgave 1.6" />
+				  Content="Opgave 1.6"
+				  Click="buttonOpg16_Click" />
 		<Button x:Name="buttonOpg17"
 				  Grid.Row="5"
 				  Margin="10"
 				  HorizontalAlignment="Stretch"
 				  VerticalAlignment="Stretch"
-				  Content="Opgave 1.7" />
+				  Content="Opgave 1.7"
+				  Click="buttonOpg17_Click" />
 		<Button x:Name="buttonOpg18"
 				  Grid.Row="6"
 				  Margin="10"
@@ -86,7 +88,7 @@
 		<ListBox x:Name="listBoxRes"
 					Grid.Column="1"
 					Grid.Row="0"
-					Grid.RowSpan="9"
+					Grid.RowSpan="10"
 					Margin="5" >
 			
 		</ListBox>

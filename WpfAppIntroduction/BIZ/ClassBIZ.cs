@@ -73,5 +73,56 @@ namespace WpfAppIntroduction.BIZ
                 listBox.Items.Add($"{unsortedNumbers[i].ToString()} - {sortedNumbers[i].ToString()}");
             }
         }
+
+        public void Delopgave16(ListBox listBox)
+        {
+            Random rnd = new Random();
+            List<int> numbers = new List<int>();
+
+            for (int i = 0; i < 25; i++)
+            {
+                int numberToAdd = rnd.Next(100000, 1000001);
+
+                listBox.Items.Add(numberToAdd.ToString());
+                numbers.Add(numberToAdd);
+            }
+
+            listBox.Items.Add("");
+
+            listBox.Items.Add($"Gennemsnit: {FindAverage(numbers)}");
+        }
+
+        public int FindAverage(List<int> numbers)
+        {
+            int total = 0;
+
+            foreach (var i in numbers)
+            {
+                total += i;
+            }
+
+            return total / numbers.Count;
+        }
+
+        public void Delopgave17(ListBox listBox)
+        {
+            Random rnd = new Random();
+            List<int> numbers = new List<int>();
+
+            for (int i = 0; i < 25; i++)
+            {
+                int numberToAdd = rnd.Next(100000, 1000001);
+
+                numbers.Add(numberToAdd);
+            }
+
+            numbers.Sort();
+            int average = FindAverage(numbers);
+
+            foreach (var i in numbers)
+            {
+                listBox.Items.Add($"{i.ToString()} - {average.ToString()} = {(i - average).ToString()}");
+            }
+        }
     }
 }
