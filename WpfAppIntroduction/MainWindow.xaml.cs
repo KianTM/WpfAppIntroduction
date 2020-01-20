@@ -75,5 +75,11 @@ namespace WpfAppIntroduction
             classBIZ.ClearList(listBoxRes);
             classBIZ.Delopgave19(listBoxRes);
         }
+
+        private void buttonOpg110_Click(object sender, RoutedEventArgs e)
+        {
+            classBIZ.ClearList(listBoxRes);
+            classBIZ.Delopgave110(listBoxRes);
+        }
     }
 }

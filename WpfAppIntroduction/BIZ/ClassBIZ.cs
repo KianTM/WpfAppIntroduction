@@ -195,5 +195,41 @@ namespace WpfAppIntroduction.BIZ
                 listBox.Items.Add(listBoxItem);
             }
         }
+
+        public void Delopgave110(ListBox listBox)
+        {
+            Random rnd = new Random();
+            List<int> numbers = new List<int>();
+            List<ListBoxItem> items = new List<ListBoxItem>();
+
+            for (int i = 0; i < 25; i++)
+            {
+                int numberToAdd = rnd.Next(100000, 1000001);
+
+                numbers.Add(numberToAdd);
+            }
+
+            numbers.Sort();
+            int average = FindAverage(numbers);
+
+            foreach (var i in numbers)
+            {
+                ListBoxItem listBoxItem = new ListBoxItem();
+                listBoxItem.Content = $"{i.ToString()} - {average.ToString()} = {(i - average).ToString()}";
+
+                if (i % 2 == 0)
+                {
+                    listBoxItem.Background = Brushes.HotPink;
+                }
+                else
+                {
+                    listBoxItem.Background = Brushes.AliceBlue;
+                }
+
+                items.Add(listBoxItem);
+            }
+
+            listBox.ItemsSource = items;
+        }
     }
 }
