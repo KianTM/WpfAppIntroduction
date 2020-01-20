@@ -9,7 +9,7 @@
     <Grid>
 		<Grid.ColumnDefinitions>
 			<ColumnDefinition Width="120"/>
-			<ColumnDefinition />
+			<ColumnDefinition Width="*"/>
 		</Grid.ColumnDefinitions>
 		<Grid.RowDefinitions>
 			<RowDefinition Height="50" />
@@ -21,7 +21,7 @@
 			<RowDefinition Height="50" />
 			<RowDefinition Height="50" />
 			<RowDefinition Height="50" />
-			<RowDefinition />
+			<RowDefinition Height="*"/>
 		</Grid.RowDefinitions>
 		 <!--#region Buttons-->
 		<Button x:Name="buttonOpg12"
