@@ -51,5 +51,27 @@ namespace WpfAppIntroduction.BIZ
                 listBox.Items.Add(i);
             }
         }
+
+        public void Delopgave15(ListBox listBox)
+        {
+            Random rnd = new Random();
+            List<int> unsortedNumbers = new List<int>();
+            List<int> sortedNumbers = new List<int>();
+
+            for (int i = 0; i < 25; i++)
+            {
+                int numberToAdd = rnd.Next(100000, 1000001);
+
+                unsortedNumbers.Add(numberToAdd);
+                sortedNumbers.Add(numberToAdd);
+            }
+
+            sortedNumbers.Sort();
+
+            for (int i = 0; i < unsortedNumbers.Count; i++)
+            {
+                listBox.Items.Add($"{unsortedNumbers[i].ToString()} - {sortedNumbers[i].ToString()}");
+            }
+        }
     }
 }
