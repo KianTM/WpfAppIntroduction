@@ -124,5 +124,42 @@ namespace WpfAppIntroduction.BIZ
                 listBox.Items.Add($"{i.ToString()} - {average.ToString()} = {(i - average).ToString()}");
             }
         }
+
+        public List<string> Delopgave18()
+        {
+            Random rnd = new Random();
+            List<int> numbers = new List<int>();
+            List<string> strings = new List<string>();
+
+            for (int i = 0; i < 25; i++)
+            {
+                int numberToAdd = rnd.Next(100000, 1000001);
+
+                numbers.Add(numberToAdd);
+            }
+
+            numbers.Sort();
+            int average = FindAverage(numbers);
+
+            foreach (var i in numbers)
+            {
+                strings.Add($"{i.ToString()} - {average.ToString()} = {(i - average).ToString()}");
+            }
+
+            return strings;
+        }
+
+        public void ClearList(ListBox listBox)
+        {
+            if (listBox.ItemsSource != null)
+            {
+                listBox.ItemsSource = null;
+                listBox.Items.Clear();
+            }
+            else
+            {
+                listBox.Items.Clear();
+            }
+        }
     }
 }

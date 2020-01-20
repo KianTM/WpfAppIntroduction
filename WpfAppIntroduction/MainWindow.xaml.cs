@@ -30,38 +30,44 @@ namespace WpfAppIntroduction
 
         private void buttonOpg12_Click(object sender, RoutedEventArgs e)
         {
-            listBoxRes.Items.Clear();
+            classBIZ.ClearList(listBoxRes);
             classBIZ.Delopgave12(listBoxRes);
         }
 
         private void buttonOpg13_Click(object sender, RoutedEventArgs e)
         {
-            listBoxRes.Items.Clear();
+            classBIZ.ClearList(listBoxRes);
             classBIZ.Delopgave13(listBoxRes);
         }
 
         private void buttonOpg14_Click(object sender, RoutedEventArgs e)
         {
-            listBoxRes.Items.Clear();
+            classBIZ.ClearList(listBoxRes);
             classBIZ.Delopgave14(listBoxRes);
         }
 
         private void buttonOpg15_Click(object sender, RoutedEventArgs e)
         {
-            listBoxRes.Items.Clear();
+            classBIZ.ClearList(listBoxRes);
             classBIZ.Delopgave15(listBoxRes);
         }
 
         private void buttonOpg16_Click(object sender, RoutedEventArgs e)
         {
-            listBoxRes.Items.Clear();
+            classBIZ.ClearList(listBoxRes);
             classBIZ.Delopgave16(listBoxRes);
         }
 
         private void buttonOpg17_Click(object sender, RoutedEventArgs e)
         {
-            listBoxRes.Items.Clear();
+            classBIZ.ClearList(listBoxRes);
             classBIZ.Delopgave17(listBoxRes);
+        }
+
+        private void buttonOpg18_Click(object sender, RoutedEventArgs e)
+        {
+            classBIZ.ClearList(listBoxRes);
+            listBoxRes.ItemsSource = classBIZ.Delopgave18();
         }
     }
 }
