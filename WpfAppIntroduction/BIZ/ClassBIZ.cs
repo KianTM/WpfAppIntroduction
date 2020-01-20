@@ -29,7 +29,26 @@ namespace WpfAppIntroduction.BIZ
             for (int i = 0; i < 25; i++)
             {
                 int numberToAdd = rnd.Next(100000, 1000001);
-                listBox.Items.Add(numberToAdd);
+                listBox.Items.Add(numberToAdd.ToString());
+            }
+        }
+
+        public void Delopgave14(ListBox listBox)
+        {
+            Random rnd = new Random();
+            List<int> numbers = new List<int>();
+
+            for (int i = 0; i < 25; i++)
+            {
+                int numberToAdd = rnd.Next(100000, 1000001);
+                numbers.Add(numberToAdd);
+            }
+
+            numbers.Sort();
+
+            foreach (var i in numbers)
+            {
+                listBox.Items.Add(i);
             }
         }
     }
