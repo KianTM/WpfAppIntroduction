@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Controls;
+using System.Windows.Media;
 
 namespace WpfAppIntroduction.BIZ
 {
@@ -159,6 +160,39 @@ namespace WpfAppIntroduction.BIZ
             else
             {
                 listBox.Items.Clear();
+            }
+        }
+
+        public void Delopgave19(ListBox listBox)
+        {
+            Random rnd = new Random();
+            List<int> numbers = new List<int>();
+
+            for (int i = 0; i < 25; i++)
+            {
+                int numberToAdd = rnd.Next(100000, 1000001);
+
+                numbers.Add(numberToAdd);
+            }
+
+            numbers.Sort();
+            int average = FindAverage(numbers);
+
+            foreach (var i in numbers)
+            {
+                ListBoxItem listBoxItem = new ListBoxItem();
+                listBoxItem.Content = $"{i.ToString()} - {average.ToString()} = {(i - average).ToString()}";
+                
+                if (i % 2 == 0)
+                {
+                    listBoxItem.Background = Brushes.HotPink;
+                }
+                else
+                {
+                    listBoxItem.Background = Brushes.AliceBlue;
+                }
+
+                listBox.Items.Add(listBoxItem);
             }
         }
     }
