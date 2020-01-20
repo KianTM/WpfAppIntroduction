@@ -21,5 +21,16 @@ namespace WpfAppIntroduction.BIZ
                 listBox.Items.Add(i.ToString());
             }
         }
+
+        public void Delopgave13(ListBox listBox)
+        {
+            Random rnd = new Random();
+
+            for (int i = 0; i < 25; i++)
+            {
+                int numberToAdd = rnd.Next(100000, 1000001);
+                listBox.Items.Add(numberToAdd);
+            }
+        }
     }
 }

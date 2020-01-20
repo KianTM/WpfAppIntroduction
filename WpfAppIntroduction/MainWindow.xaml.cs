@@ -30,7 +30,14 @@ namespace WpfAppIntroduction
 
         private void buttonOpg12_Click(object sender, RoutedEventArgs e)
         {
+            listBoxRes.Items.Clear();
             classBIZ.Delopgave12(listBoxRes);
+        }
+
+        private void buttonOpg13_Click(object sender, RoutedEventArgs e)
+        {
+            listBoxRes.Items.Clear();
+            classBIZ.Delopgave13(listBoxRes);
         }
     }
 }
